@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imagine the Scene</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -18,31 +19,61 @@
       min-height: 100vh;
       text-align: center;
     }
+    header {
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       color: #ffffff;
     }
     h2 {
       font-weight: 400;
       font-size: 1.5rem;
       margin-top: 0;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     p.quote {
       font-style: italic;
       font-size: 1.2rem;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       color: #dddddd;
     }
-    .soon {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
+    .channels {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .channel-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      width: 200px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .channel-card i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #ffe08a;
     }
     .highlight {
       font-weight: bold;
       color: #ffe08a;
+    }
+    .contact-links {
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+    .contact-links span {
+      display: block;
+      margin-bottom: 8px;
+    }
+    form {
+      display: none;
     }
     .footer {
       margin-top: auto;
@@ -54,33 +85,43 @@
       color: #ffe08a;
       text-decoration: none;
     }
-    .contact-links {
-      margin-top: 20px;
-      font-size: 0.95rem;
-    }
-    .contact-links span {
-      display: block;
-      margin-bottom: 5px;
-    }
   </style>
 </head>
 <body>
-  <h1>🌌 Imagine the Scene</h1>
-  <h2>Histórias que prendem, refletem e transformam.</h2>
+  <header>
+    <h1>🌌 Imagine the Scene</h1>
+    <h2>Histórias que prendem, refletem e transformam.</h2>
+    <p class="quote">“Cada história é uma porta para dentro de você.”</p>
+  </header>
 
-  <p class="quote">“Cada história é uma porta para dentro de você.”</p>
+  <section class="channels">
+    <div class="channel-card">
+      <i class="fas fa-tv"></i>
+      <p><span class="highlight">Em breve:</span> Canal em Português</p>
+    </div>
+    <div class="channel-card">
+      <i class="fas fa-globe"></i>
+      <p><span class="highlight">Em breve:</span> Canal em Inglês</p>
+    </div>
+    <div class="channel-card">
+      <i class="fas fa-language"></i>
+      <p><span class="highlight">Em breve:</span> Canal em Espanhol</p>
+    </div>
+  </section>
 
-  <p class="soon">📺 <span class="highlight">Em breve:</span></p>
-  <p class="soon">Canal em <span class="highlight">Português</span></p>
-  <p class="soon">Canal em <span class="highlight">Inglês</span></p>
-  <p class="soon">Canal em <span class="highlight">Espanhol</span></p>
-
-  <p class="soon">🔔 Acompanhe e mergulhe nas cenas da alma.</p>
+  <p class="quote">🔔 Acompanhe e mergulhe nas cenas da alma.</p>
 
   <div class="contact-links">
     <span>📧 <a href="mailto:contact@imaginethescene.net">contact@imaginethescene.net</a></span>
     <span>📱 Em breve: redes sociais oficiais</span>
   </div>
+
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <input type="text" name="name" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
 
   <div class="footer">
     <p>© 2025 Imagine the Scene. Todos os direitos reservados.</p>
