@@ -33,6 +33,7 @@
       font-size: 3.5rem;
       margin-bottom: 10px;
       color: #ffffff;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
     h2 {
       font-weight: 400;
@@ -113,6 +114,57 @@
       opacity: 0.05;
       z-index: -1;
     }
+    .gallery {
+      max-width: 1000px;
+      margin: 60px auto;
+    }
+    .gallery h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+    .trailer {
+      margin: 60px auto;
+      max-width: 700px;
+    }
+    .trailer .video-box {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 40px;
+      border-radius: 20px;
+      font-style: italic;
+      color: #ccc;
+    }
+    .about {
+      max-width: 800px;
+      margin-top: 80px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      animation: fadeIn 2s ease;
+    }
+    .about h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ddd;
+    }
   </style>
 </head>
 <body>
@@ -145,6 +197,28 @@
     </a>
     <p style="font-size: 0.9rem; color: #ccc; margin-top: 10px;">Em breve, você poderá apoiar esse projeto e fazer parte da nossa jornada.</p>
   </div>
+
+  <section class="gallery">
+    <h2>✨ Sinta a Cena</h2>
+    <div class="gallery-grid">
+      <img src="https://source.unsplash.com/400x300/?nature,stars" alt="Imagem 1">
+      <img src="https://source.unsplash.com/400x300/?cinema" alt="Imagem 2">
+      <img src="https://source.unsplash.com/400x300/?emotion" alt="Imagem 3">
+      <img src="https://source.unsplash.com/400x300/?dream" alt="Imagem 4">
+    </div>
+  </section>
+
+  <section class="trailer">
+    <h2>🎬 Trailer do Canal</h2>
+    <div class="video-box">
+      <p>Em breve, você poderá assistir ao trailer aqui!</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>💡 Sobre o Projeto</h2>
+    <p>Imagine the Scene nasceu da vontade de criar histórias que conectam, emocionam e inspiram. Nosso objetivo é ir além da superfície, explorando temas profundos com sensibilidade e criatividade. Acreditamos que uma boa narrativa pode transformar, despertar e tocar a alma de quem assiste.</p>
+  </section>
 
   <p class="quote">🔔 Acompanhe e mergulhe nas cenas da alma.</p>
 
